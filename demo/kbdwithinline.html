@@ -82,38 +82,13 @@ function submitTryit() {
 <html>
 <head>
 <style>
-div {
-  border: 1px solid gray;
-  padding: 8px;
-  word-wrap:break-word;
-}
-
-h1 {
-  text-align: center;
-  text-transform: uppercase;
-  color: #4CAF50;
-}
-
-p {
-  text-indent: 50px;
-  text-align: justify;
-  letter-spacing: 3px;
-}
-
-a {
-  text-decoration: none;
-  color: #008CBA;
-}
+kbd{position:relative;color:#000000}kbd:before{position:absolute;content:'Double click to select';display:table;bottom:23px;left:0;background:#4c4c4c;color:#00ffe4;padding:4px;border-radius:2px;font-size:75%;line-height:1;opacity:0;visibility:hidden;transform:scale(0.8);z-index:2;transition:all .3s}kbd:hover:before{transform:scale(1.0);opacity:1;visibility:visible;transition:all .3s}kbd,blockquote{-webkit-user-select:text;-khtml-user-select:text;-moz-user-select:text;-ms-user-select:text;user-select:text}kbd{display:inline-block;border:1px solid #979797;box-shadow:2px 2px 1px#979797;border-radius:3px;padding:.2em .5em;margin:.2em;transition:all .3s}kbd:hover{border-color:#000000;color:#FF0000}kbd,blockquote{-webkit-user-select:text;-khtml-user-select:text;-moz-user-select:text;-ms-user-select:text;user-select:text}input::-webkit-input-placeholder,textarea::-webkit-input-placeholder,input:-moz-placeholder,textarea:-moz-placeholder,input.placeholder_text,textarea.placeholder_text{color:#888}[placeholder]:focus::-webkit-input-placeholder{transition:opacity .5s .5s ease;opacity:0}
 </style>
 </head>
 <body>
 
-<div>
-  <h1>text formatting</h1>
-  <p>Hello World!<br>
-These sentence are styled with CSS.
-  <a target="_blank" href="https://alatunik.in/">"Tryit URL, Alat Unik"</a> link.</p>
-</div>
+<p>Ini adalah contoh tag KBD dengan menggunakan inline</p>
+		<p><kbd>tag KBD</kbd></p>
 
 </body>
 </html>
