@@ -72,10 +72,10 @@ function restack(horizontal) {
 function showFrameSize() {
     var t;
     var width, height;
-    
-    height = Number(w3_getStyleValue(document.getElementById("iframeResult"), "height").replace("px", "")).toFixed();
     width = Number(w3_getStyleValue(document.getElementById("iframeResult"), "width").replace("px", "")).toFixed();
-    document.getElementById("framesize").innerHTML = "Result Size: <span>" + width + " x " + height + "</span>";
+    height = Number(w3_getStyleValue(document.getElementById("iframeResult"), "height").replace("px", "")).toFixed();
+    
+    document.getElementById("framesize").innerHTML = "Result Size: <span>" + width + " y " + height + "</span>";
 }
 
 var dragging = false;
