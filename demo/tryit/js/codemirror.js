@@ -9693,8 +9693,8 @@ CodeMirror.defineMode("css", function(config, parserConfig) {
     "marker", "marker-end", "marker-mid", "marker-start", "shape-rendering", "stroke",
     "stroke-dasharray", "stroke-dashoffset", "stroke-linecap", "stroke-linejoin",
     "stroke-miterlimit", "stroke-opacity", "stroke-width", "text-rendering",
-    "baseline-shift", "dominant-baseline", "glyph-orientation-horizontal",
-    "glyph-orientation-vertical", "text-anchor", "writing-mode"
+    "baseline-shift", "dominant-baseline", "glyph-orientation-vertical",
+    "glyph-orientation-horizontal", "text-anchor", "writing-mode"
   ], propertyKeywords = keySet(propertyKeywords_);
 
   var nonStandardPropertyKeywords_ = [
