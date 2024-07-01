@@ -13,6 +13,7 @@
         <div class="w3-bar w3-light-grey" style="">
             <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item topnav-icons fa fa-rotate"></a>
             <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green" onclick="submitTryit(1)">Run &raquo;</button>
+            &nbsp; <button class="w3-button w3-bar-item w3-orange w3-hover-white w3-hover-text-green" onclick="document.location=''">Refresh</button>
             <span class="w3-right w3-hide-medium w3-hide-small"></span>
             <span class="w3-right w3-hide-small"><span id="framesize"></span></span>
         </div>
@@ -25,7 +26,47 @@
             <div id="textarea">
                 <div id="textareawrapper">
                     <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
-Masukkan Kode Disini
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  border: 1px solid gray;
+  padding: 8px;
+  word-wrap:break-word;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #4CAF50;
+}
+
+p {
+  text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 3px;
+}
+
+a {
+  text-decoration: none;
+  color: #008CBA;
+}
+</style>
+</head>
+<body>
+
+<div>
+  <h1>text formatting</h1>
+  <p>Hello World!<br>
+These sentence are styled with CSS.
+  <a target="_blank" href="/demo/">"Tryit URL, Sinau Blog"</a> link.</p>
+</div>
+
+</body>
+</html>
+                        
                     </textarea>
                     <form id="codeForm" autocomplete="off">
                         <input type="hidden" name="code" id="code" />
