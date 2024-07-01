@@ -25,7 +25,7 @@ function submitTryit(n) {
 }
 
 var currentStack = true;
-if ((window.screen.availWidth <= 768 && window.innerHeight > window.innerWidth) || " horizontal" == " horizontal") { restack(true); }
+if ((window.screen.availWidth <= 768 && window.innerHeight > window.innerWidth) || " vertical" == " horizontal") { restack(true); }
 
 function restack(horizontal) {
     var tc, ic, t, i, c, f, sv, sh, d, height, flt, width;
