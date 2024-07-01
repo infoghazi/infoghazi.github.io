@@ -75,7 +75,7 @@ function showFrameSize() {
     width = Number(w3_getStyleValue(document.getElementById("iframeResult"), "width").replace("px", "")).toFixed();
     height = Number(w3_getStyleValue(document.getElementById("iframeResult"), "height").replace("px", "")).toFixed();
     
-    document.getElementById("framesize").innerHTML = "Result Size: <span>" + width + " y " + height + "</span>";
+    document.getElementById("framesize").innerHTML = "Result Size: <span>" + width + " x " + height + "</span>";
 }
 
 var dragging = false;
