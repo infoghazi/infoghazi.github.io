@@ -1,0 +1,271 @@
+<html lang="en-US">
+<head>
+<title>Tryit Editor - HTML Live Editor</title>
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="html live, live editor, w3school live editor" name="keywords">
+	<meta name="author" content="Sinau Blog">
+	<meta name="description" content="HTML Live Editor">
+
+	<!-- Open graph -->
+	<meta property="og:url" content="https://alatunik.in/htmleditor/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Try It - HTML Live Editor" />
+	<meta property="og:description" content="Edit HTML Online" />
+	
+ <link rel="stylesheet" href="tryitstyle.css"> 
+ 
+ <!-- Favicon -->
+	<link rel="shortcut icon" href=" <!-- Favicon -->
+	<link rel="shortcut icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlbOssyRZy3lz0EcMXuwSfUZGFt449xuO4lc1tkGdSKkWwZs7N7qLRXBA-KXFHAyKWyZUuUm4eRbRzIxEGTMhBnMxbtN3tKp1ZB7ERXDtf6X-wgCHtWEecJzZtR7efNghTt4HgTfVPcV6DX5o0o8Cc91PfuwBx9K20nZViaBklMMx8pWqxqPZCsIaMXoGF/s1600/1234567.png">
+
+<script type='text/javascript'>
+ 
+</script>
+<script>
+if (window.addEventListener) {              
+    window.addEventListener("resize", browserResize);
+} else if (window.attachEvent) {                 
+    window.attachEvent("onresize", browserResize);
+}
+var xbeforeResize = window.innerWidth;
+
+function browserResize() {
+    var afterResize = window.innerWidth;
+    if ((xbeforeResize < (970) && afterResize >= (970)) || (xbeforeResize >= (970) && afterResize < (970)) ||
+        (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
+        (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
+        xbeforeResize = afterResize;
+        googletag.cmd.push(function() {
+            googletag.pubads().refresh([gptAdSlots[0]]);
+        });
+    }
+}
+</script>
+<script type="text/javascript">
+function submitTryit() {
+  var text = document.getElementById("textareaCode").value;
+  var ifr = document.createElement("iframe");
+  ifr.setAttribute("frameborder", "0");
+  ifr.setAttribute("id", "iframeResult");  
+  document.getElementById("iframewrapper").innerHTML = "";
+  document.getElementById("iframewrapper").appendChild(ifr);
+  var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+  ifrw.document.open();
+  ifrw.document.write(text);  
+  ifrw.document.close();
+}
+</script>
+<style>
+
+</style>
+</head>
+<body>
+   
+<div id='tryitLeaderboard'>
+<!-- TryitLeaderboard -->
+ <h2> <a href="/demo/">Sinau Blog</a> - Tryit Editor</h2>
+</div> 
+
+<div class="container">
+  <div class="textareacontainer">
+    <div class="textarea">
+      <div style="overflow:auto;">
+        <div class="headerText">Edit This Code:</div>
+        <button class="seeResult" type="button" onclick="submitTryit()">Run &raquo;</button>
+      </div>
+      <div class="textareawrapper">
+        <textarea autocomplete="off" class="code_input" id="textareaCode" wrap="logical" spellcheck="false">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalender Otomatis</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 27px;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.calendar {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+}
+
+.calendar-header button {
+    background-color: #0056b3;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.calendar-body {
+    padding: 10px;
+}
+
+.day-names, .days {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.day-names div, .days div {
+    width: 14.28%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.day-names div {
+    font-weight: bold;
+    background-color: #f1f1f1;
+}
+
+.days div {
+    border: 1px solid #ddd;
+    height: 100px;
+    box-sizing: border-box;
+}
+
+.days div:nth-child(7n + 1) {
+    color: red;
+}
+
+</style>
+</head>
+<body>
+    <div class="calendar">
+        <div class="calendar-header">
+            <button id="prev-month">Prev</button>
+            <h2 id="month-year"></h2>
+            <button id="next-month">Next</button>
+        </div>
+        <div class="calendar-body">
+            <div class="day-names">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="days" id="calendar-days"></div>
+        </div>
+    </div>
+    
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const calendarDays = document.getElementById('calendar-days');
+    const monthYear = document.getElementById('month-year');
+    const prevMonthBtn = document.getElementById('prev-month');
+    const nextMonthBtn = document.getElementById('next-month');
+    
+    let currentDate = new Date();
+    
+    function renderCalendar(date) {
+        const month = date.getMonth();
+        const year = date.getFullYear();
+        
+        monthYear.textContent = `${date.toLocaleString('default', { month: 'long' })} ${year}`;
+        
+        calendarDays.innerHTML = '';
+        
+        const firstDayOfMonth = new Date(year, month, 1).getDay();
+        const lastDateOfMonth = new Date(year, month + 1, 0).getDate();
+        
+        for (let i = 0; i < firstDayOfMonth; i++) {
+            const emptyCell = document.createElement('div');
+            calendarDays.appendChild(emptyCell);
+        }
+        
+        for (let i = 1; i <= lastDateOfMonth; i++) {
+            const dayCell = document.createElement('div');
+            dayCell.textContent = i;
+            calendarDays.appendChild(dayCell);
+        }
+    }
+    
+    prevMonthBtn.addEventListener('click', () => {
+        currentDate.setMonth(currentDate.getMonth() - 1);
+        renderCalendar(currentDate);
+    });
+    
+    nextMonthBtn.addEventListener('click', () => {
+        currentDate.setMonth(currentDate.getMonth() + 1);
+        renderCalendar(currentDate);
+    });
+    
+    renderCalendar(currentDate);
+});
+
+</script>
+</body>
+</html>
+
+
+</textarea>
+          <form autocomplete="off" style="margin:0px;display:none;">
+            <input type="hidden" name="code" id="code" />
+            <input type="hidden" id="bt" name="bt" />
+          </form>
+       </div>
+    </div>
+  </div>
+  
+  <div class="iframecontainer">
+    <div class="iframe">
+      <div style="overflow:auto;">
+        <div class="headerText">Result:</div>
+        <input class="backhome" type="button" onclick="location.href='/demo/';" value="HOME" />
+      </div>
+      <div id="iframewrapper" class="iframewrapper">
+        
+      </div>
+    </div>
+  </div>
+  <div class="footerText">Try it Yourself - &copy; <a href="/demo/">Sinau Blog</a></div>      
+</div>
+<script>submitTryit()</script>
+<script>
+var editboxHTML = 
+'<html class="expand close">' +
+'<head>' +
+'<style type="text/css">' +
+'.expand { width: 100%; height: 100%; }' +
+'.close { border: none; margin: 0px; padding: 0px; }' +
+'html,body { overflow: hidden; }' +
+'<\/style>' +
+'<\/head>' +
+'<body class="expand close" onload="document.f.ta.focus(); document.f.ta.select();">' +
+'<form class="expand close" name="f">' +
+'<textarea class="expand close" style="background: #def;" name="ta" wrap="hard" spellcheck="false">' +
+'<\/textarea>' +
+'<\/form>' +
+'<\/body>' +
+'<\/html>';
+
+var defaultStuff = '<h3>Welcome to the real-time HTML editor Cuy!<\/h3>\n' +
+'<p>Type HTML in the textarea above, and it will magically appear in the frame below.<\/p>';
+
+</script>
+</body>
+</html>
